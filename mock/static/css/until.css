@@ -1,0 +1,94 @@
+/*做自适应布局时，外部父元素不给高宽*/
+
+
+/*设置默认img样式*/
+
+@charset "utf-8";
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	/*清除移动端默认的点击高亮效果*/
+	-webkit-tap-highlight-color: transparent;
+	/*设置以边框开始计算宽度*/
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html {
+	letter-spacing: 1px;
+}
+
+body {
+	font-size: 14px;
+	font-family: "Microsoft YaHei", sans-serif;
+	/*设备默认字体*/
+	color: #333;
+}
+
+a {
+	color: #333;
+	/*text-decoration: none;*/
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul,
+ol {
+	list-style: none;
+	overflow: hidden;
+}
+
+input,
+button,
+select,
+textarea {
+	outline: none;
+}
+
+
+/*禁止用户选中文字*/
+
+.user-select {
+	-webkit-user-select: none;
+}
+
+input {
+	border: none;
+	border: 0px;
+	/*清除移动端默认的表单样式*/
+	-webkit-appearance: none;
+}
+
+
+/*解决苹果样式冲突*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	/* chrome */
+	-webkit-appearance: none!important;
+	margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+	/*Firefox*/
+}
+
+
+/*图片默认样式*/
+
+img {
+	border: none;
+	display: block;
+}
+
+
+/*清除浮动*/
+.clear:after {
+	display: block;
+	content: " ";
+	clear: both;
+}
